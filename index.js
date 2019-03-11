@@ -15,7 +15,7 @@ app.use(
   var key = "AIzaSyCJuRDLJZNS5yO2MhWxlCN-4FnC4L1Rs8g";
   var location = "-33.8670522,151.1957362";
   var radius = 16000;
-//  var types="restaurants";
+ var types="restaurants";
   var sensor = false;
   
 app.post('/webhook',(req,res) =>{
@@ -28,6 +28,7 @@ app.post('/webhook',(req,res) =>{
       : "restaurants";
 	  
 	var w=getPlaces(types);
+	console.log(w);
 	
 	 return res.json({
     speech: w,
@@ -50,13 +51,13 @@ function getPlaces(types)
  var req=request(url,function (err,response,body){
 
       var places = JSON.parse(body);
-	  var result="";
+	
 	/* for(i=0;i<5;i++)
 	 {
 		 w=w+"  "+places.results[i].name;
 	 }*/
 	 result=places.results[0].name;
-      console.log(result);
+    //  console.log(result);
     });
 	
 	while(result == undefined){
