@@ -27,7 +27,7 @@ app.post('/webhook',(req,res) =>{
       ? req.body.result.parameters.places
       : "restaurants";
 	  
-	var w=getPlaces(type);
+	var w=getPlaces(types);
 	
 	 return res.json({
     speech: w,
@@ -36,7 +36,7 @@ app.post('/webhook',(req,res) =>{
   });
 });
 var result;
-function getPlaces(type)
+function getPlaces(types)
 {
 	
   var key = "AIzaSyCJuRDLJZNS5yO2MhWxlCN-4FnC4L1Rs8g";
