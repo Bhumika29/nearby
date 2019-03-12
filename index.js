@@ -7,7 +7,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 //const uuidv1 = require('uuid/v1');
 const request=require("request");
-var deasync = require('deasync');
+const deasync = require("deasync");
 const app = express();
 app.use(bodyParser.json());
 app.use(
