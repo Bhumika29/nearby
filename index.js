@@ -26,7 +26,7 @@ var types =
       ? req.body.result.parameters.places
       : "restaurants";
 	 
-	var w=getPlaces(types);
+	var w=types;
 	
 	return res.json({
     speech: w,
