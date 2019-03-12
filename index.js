@@ -58,9 +58,6 @@ function getPlaces(types)
 		result=places.results[1].name;
 	
 });
-	while(result == undefined){
-		require('deasync').runLoopOnce();
-	}
 		
 	return result;
 }
