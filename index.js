@@ -26,7 +26,7 @@ var types =
       ? req.body.result.parameters.places
       : "restaurants";
 	 
-	var w=types;
+	var w=getPlaces(types);
 	
 	return res.json({
     speech: w,
@@ -41,7 +41,7 @@ var result;
 function getPlaces(types)
 {
 	var key = "AIzaSyCJuRDLJZNS5yO2MhWxlCN-4FnC4L1Rs8g";
-  var location = "-33.8670522,151.1957362";
+  var location = [-33.8670522,151.1957362];
   var radius = 16000;
 //  var types="restaurants";
   var sensor = false;
