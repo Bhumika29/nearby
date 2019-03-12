@@ -53,9 +53,9 @@ function getPlaces(types)
 	var req=request(url,function (err,response,body){
 	if(err)
 		console.log(err);
-	var places=JSON.parse(body);
+	var places=JSON.parse(response);
 	console.log(places);
-		result=places.results[1].name;
+	result=places
 	
 });
 		
