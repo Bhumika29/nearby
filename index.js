@@ -55,9 +55,7 @@ function getPlaces(types)
 		console.log(err);
 	var places=JSON.parse(body);
 	console.log(places);
-	
-	
-		result=places.results[0].name;
+	result="Nearest is"+places.results[0].name;
 	
 });
 	while(result == undefined){
